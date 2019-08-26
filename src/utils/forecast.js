@@ -14,7 +14,9 @@ const forecast = (latitude, longitude, callback) => {
           body.currently.temperature
         } degrees out. And there is ${
           body.currently.precipProbability
-        }% chance of rain...`
+        }% chance of rain. Windspeed is ${Math.round(
+          body.currently.windSpeed
+        )} m/s.`
       );
     }
   });
